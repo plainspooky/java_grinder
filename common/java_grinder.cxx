@@ -30,6 +30,7 @@
 #include "MIPS32.h"
 #include "MSP430.h"
 #include "MSP430X.h"
+#include "MSX.h"
 #include "PIC32.h"
 #include "Propeller.h"
 #include "SegaGenesis.h"
@@ -52,6 +53,11 @@ static Generator *new_generator(const char *chip_type)
 {
   Generator *generator = NULL;
 
+  if (strcasecmp("msx", chip_type) == 0)
+  {
+    generator = new MSX();
+  }
+    else
   if (strcasecmp("appleiigs", chip_type) == 0)
   {
     generator = new AppleIIgs();
@@ -255,7 +261,7 @@ int main(int argc, char *argv[])
   {
     printf("Usage: %s <class> <outfile> <platform>\n"
            "   platforms:\n"
-           "     appleiigs\n"
+           "     hidden msx, appleiigs\n"
            "     attiny2313, atmega328, atmega328p, attiny85, attiny84, attiny13,\n"
            "     dspic,\n"
            "     m6502, c64\n"
@@ -359,5 +365,3 @@ int main(int argc, char *argv[])
 
   return ret;
 }
-
-

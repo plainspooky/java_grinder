@@ -27,6 +27,7 @@
 #include "dsp.h"
 #include "ioport.h"
 #include "memory.h"
+#include "msx_.h"
 #include "propeller_.h"
 #include "sega_genesis.h"
 #include "spi.h"
@@ -147,6 +148,7 @@ int invoke_static(JavaClass *java_class, int method_id, Generator *generator)
     CHECK(TI99, ti99)
     CHECK(TRS80Coco, trs80_coco)
     CHECK(W65C265SXB, w65c265sxb)
+    CHECK(MSX, msx)
       else
     {}
   }
@@ -250,5 +252,3 @@ int invoke_static(JavaClass *java_class, int method_id, Generator *generator, in
 
   return -1;
 }
-
-
