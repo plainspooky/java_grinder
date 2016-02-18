@@ -43,7 +43,7 @@ int msx(JavaClass *java_class, Generator *generator, char *method_name)
 {
   //CHECK_FUNC(someFunction,_I)
   CHECK_FUNC(beep,_I)
-  /*CHECK_FUNC(color,_I)
+  CHECK_FUNC(color,_I)
   CHECK_FUNC(cls,_I)
   CHECK_FUNC(screen,_I)
   CHECK_FUNC(keyOn,_I)
@@ -51,7 +51,7 @@ int msx(JavaClass *java_class, Generator *generator, char *method_name)
   CHECK_FUNC(fillVRAM,_I)
   CHECK_FUNC(copyVRAM,_I)
   CHECK_FUNC(putChar,_C)
-  CHECK_FUNC(setCursor,_I) */
+  CHECK_FUNC(setCursor,_I)
   return -1;
 }
 
